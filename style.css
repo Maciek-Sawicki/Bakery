@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brown: #A06235;
+    --black: #141313;
+    --honey-brown: #F3A446;
+    --font-color: #EFEFEF;
+    --dark-grey: #1D1D1D;
+    --heading1: 46px;
+    --heading2: 32px;
+    --heading3: 26px;
+    --paragraph: 20px;
+
+}
+
+.background {
+    background-image: url("img\\bread-and-other-baked-goods-picjumbo-com.jpg");
+    background-size: cover;
+}
+
+.background-transparent {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--honey-brown);
+    color: var(--black);
+    font-size: var(--paragraph);
+    padding: 5px 25px;
+    border-radius: 10px;
+    border: 5px solid var(--honey-brown);
+    transition: .3s;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: transparent;
+    color: var(--font-color);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.about-us {
+    width: 30%;
+    min-height: 90vh;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.about-text {
+    display: flex;
+    margin: 50px 0;
+    color: var(--font-color);
+    font-size: var(--paragraph);
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+}
+
+.about-text p {
+    margin: 30px 0;
+}
+
+.about-text h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: var(--heading1);
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.logo {
+    align-self: flex-start;
+}
+
+.logo img {
+    width: 60%;
+}
+
+header {
+    width: 55%;
+    min-height: 90vh;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: var(--font-color);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100px;
+    align-items: center;
+    font-size: var(--paragraph);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin: 0 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--font-color);
+    transition: .3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+.hero-bread {
+    width: 100%;
+    min-height: calc(90vh - 100px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.product {
+    display: flex;
+    width: 60%;
+    /* min-height: 70vh; */
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product img {
+    width: 100%;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.price {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+
+.price>div {
+    display: flex;
+    color: var(--font-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price .info {
+    align-self: flex-end;
+}
+
+
+.price p {
+    font-size: var(--paragraph);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 25px 0;
+}
+
+.price h3 {
+    font-size: var(--heading3);
+}
+
+.price a {
+    color: var(--font-color);
+    font-size: var(--heading2);
+    transition: .3s;
+}
+
+.price a:hover {
+    opacity: 0.7;
+}
+
+
+
+.cart {
+    width: 15%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cart h2 {
+    font-size: var(--heading2);
+    margin: calc((100px - var(--heading2))/2) 0;
+}
+
+.cart h2 a {
+    color: var(--font-color);
+    transition: .3s;
+}
+
+.cart h2 a:hover {
+    opacity: 0.7;
+}
+
+.cart ul {
+    list-style: none;
+}
+
+.cart li {
+    color: var(--font-color);
+    margin-top: 80px;
+}
+
+.cart li a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: var(--paragraph);
+    transition: .3s;
+}
+
+.cart li a:hover {
+    opacity: 0.7;
+}
+
+.localization {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 10vh;
+    align-self: center;
+}
+
+.localization div {
+    display: flex;
+    color: var(--font-color);
+    width: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.localization h2 {
+    margin-right: 15px;
+}
+
+.localization a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+@media (max-width: 1500px) {
+    .product {
+        width: 70%;
+    }
+
+    header {
+        width: 60%;
+        min-height: 90vh;
+    }
+
+    .cart {
+        width: 10%;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 1320px) {
+    nav {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav li {
+        margin: 0 20px;
+    }
+
+    .about-text h1 {
+        font-size: var(--heading2);
+    }
+
+    .product {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
