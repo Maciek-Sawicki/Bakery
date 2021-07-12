@@ -55,24 +55,24 @@ button:hover {
     flex-wrap: wrap;
 }
 
-
-
 .about-us {
     width: 30%;
-    min-height: 90vh;
+    min-height: 100vh;
     padding-right: 50px;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .about-text {
     display: flex;
-    margin: 50px 0;
     color: var(--font-color);
     font-size: var(--paragraph);
     font-family: Arial, Helvetica, sans-serif;
     flex-direction: column;
+    margin-top: 10vh;
 }
 
 .about-text p {
@@ -84,14 +84,17 @@ button:hover {
     font-size: var(--heading1);
     line-height: 50px;
     text-transform: uppercase;
+
 }
 
 .logo {
-    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .logo img {
     width: 60%;
+
 }
 
 header {
@@ -99,7 +102,7 @@ header {
     min-height: 90vh;
 }
 
-nav {
+.nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -110,23 +113,23 @@ nav {
     font-size: var(--paragraph);
 }
 
-nav ul {
+.nav ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
 
-nav li {
+.nav ul li {
     margin: 0 30px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     color: var(--font-color);
     transition: .3s;
 }
 
-nav a:hover {
+.nav a:hover {
     opacity: 0.7;
 }
 
@@ -135,7 +138,8 @@ nav a:hover {
     min-height: calc(90vh - 100px);
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 10vh;
 }
 
 .product {
@@ -266,47 +270,21 @@ nav a:hover {
     color: var(--font-color);
 }
 
-@media (max-width: 1500px) {
-    .product {
-        width: 70%;
-    }
+.overlay {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-grey);
 
-    header {
-        width: 60%;
-        min-height: 90vh;
-    }
-
-    .cart {
-        width: 10%;
-        min-height: 90vh;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
+    top: 0%;
 }
 
-@media (max-width: 1320px) {
-    nav {
-        flex-direction: column-reverse;
-        justify-content: space-around;
-    }
-
-    .wrapper {
-        width: 95%;
-    }
-}
-
-@media (max-width: 1024px) {
-    nav li {
-        margin: 0 20px;
-    }
-
-    .about-text h1 {
-        font-size: var(--heading2);
-    }
-
-    .product {
-        margin: 0 auto;
-        width: 80%;
-    }
+.overlay h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--font-color);
+    font-size: var(--heading1);
 }
